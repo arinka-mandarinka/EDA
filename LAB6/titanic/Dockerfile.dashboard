@@ -1,0 +1,14 @@
+FROM python:3.11
+
+WORKDIR /app
+
+RUN pip install explainerdashboard scikit-learn pandas
+
+COPY generate_dashboard.py .
+COPY run_dashboard.py .
+
+RUN python generate_dashboard.py
+
+EXPOSE 9050
+
+CMD ["python", "run_dashboard.py"]

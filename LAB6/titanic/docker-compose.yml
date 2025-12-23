@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: online_shop_api
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: online_shop_dashboard
+    ports:
+      - "9050:9050"
+    restart: unless-stopped

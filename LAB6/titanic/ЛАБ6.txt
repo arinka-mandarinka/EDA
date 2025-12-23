@@ -1,0 +1,11 @@
+Сборка и запуск сервисов через Docker Compose:
+
+docker-compose build
+docker-compose up
+
+API модели доступно по адресу: http://localhost:5000/predict
+Dashboard интерпретации: http://localhost:9050
+
+Для остановки сервисов:
+
+docker-compose down
